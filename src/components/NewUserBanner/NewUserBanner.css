@@ -1,0 +1,13 @@
+/* for new user */
+
+.new-user-banner {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    margin-top: 10px; /* Adjust the spacing as needed */
+  }
+  
+  .new-user-banner img {
+    max-width: 100%; /* Ensures responsive scaling */
+    height: auto;
+  }
+  

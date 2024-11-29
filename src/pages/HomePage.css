@@ -1,0 +1,75 @@
+
+@media (min-width: 375px) and (max-width: 480px) {
+
+    .brand-section {
+        padding: 45px 20px;
+        text-align: left;
+        background-color: #fff; 
+    }
+    .brand-section {
+        font-size: 1.8rem; 
+        font-weight: bold;
+        margin-left: 2rem;
+        color: #333; 
+        text-transform: uppercase; 
+        letter-spacing: 3px; 
+    }
+    .Category{
+        font-size: 1.8rem; 
+        font-weight: bold;
+        margin-left: 2rem;
+        color: #333; 
+        text-transform: uppercase; 
+        letter-spacing: 3px; 
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .brand-section {
+        padding: 45px 20px;
+        text-align: left;
+        background-color: #fff; 
+    }
+    .brand-section {
+        font-size: 1.8rem; 
+        font-weight: bold;
+        margin-left: 2rem;
+        color: #333; 
+        text-transform: uppercase; 
+        letter-spacing: 3px; 
+    }
+    .Category{
+        font-size: 1.8rem; 
+        font-weight: bold;
+        margin-left: 4rem;
+        color: #333; 
+        text-transform: uppercase; 
+        letter-spacing: 3px; 
+    }
+
+
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+.brand-section {
+    padding: 45px 20px; 
+    text-align: left;
+    background-color: #fff; 
+}
+.brand-section {
+    font-size: 1.8rem; 
+    font-weight: bold;
+    margin-left: 2rem;
+    color: #333; 
+    margin-bottom: 20px;
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+}
+.Category{
+    font-size: 1.8rem; 
+    font-weight: bold;
+    margin-left: 2rem;
+    color: #333; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+} 
+}

@@ -1,0 +1,65 @@
+/* HeroCarousel.css */
+
+.carousel-container {
+  max-width: 100%;
+}
+
+.hero-carousel .carousel-item {
+  height: 400px; /* Set a consistent height for the carousel */
+}
+
+.hero-carousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Custom Dotted Indicators */
+.carousel-indicators-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0; /* Space between carousel and indicators */
+}
+
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #999;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.indicator-dot.active {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+.indicator-dot:hover {
+  background-color: #555;
+  transform: scale(1.2);
+}
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+  .hero-carousel .carousel-item {
+    height: 250px; /* Adjust height for smaller screens */
+  }
+
+  .indicator-dot {
+    width: 10px;
+    height: 10px;
+  }
+  .carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+}

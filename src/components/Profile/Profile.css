@@ -1,0 +1,72 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #daa2a2;
+    border-radius: 8px;
+    /* max-width: 400px; */
+    margin-top: 20px;
+    margin-left:20px;
+    margin-right:20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #fff !important;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #fff;
+  }
+  .about-section {
+    margin-top: 20px;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .about-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Maintains paragraph breaks from multiline strings */
+  }
+  
+  .skills-section {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .skills-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .skills-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
