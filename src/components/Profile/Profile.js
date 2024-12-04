@@ -6,7 +6,7 @@ function Profile() {
     name: "Priyanka Paliwal",
     email: "paliwal251997@gmail.com",
     bio: "A passionate front-end developer with a knack for creating dynamic user experiences.",
-    profilePicture: "/images/profile.png",
+    profilePicture: "/images/priyanka.jpeg",
     aboutMe: `
       I am a passionate front-end developer with 1.9 years of experience, specializing in React and UI design. My love for creating clean, user-focused, and visually appealing designs drives me to deliver high-quality outputs on every project I work on.
 

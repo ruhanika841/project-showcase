@@ -8,6 +8,7 @@
   padding-left: 3% !important;
  
 } */
+@media (min-width: 1024px) and (max-width: 1440px) {
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -46,15 +47,15 @@
 
 .new-badge {
   position: absolute;
-  top: -2px; /* Adjusts vertical position above the Studio text */
-  right: -29px; /* Positions it slightly to the right */
-  font-size: 0.6rem; /* Smaller font for badge */
+  top: -2px; 
+  right: -29px; 
+  font-size: 0.6rem; 
   color:  #ff3f6c;
   padding: 0.2rem 0.5rem;
-  border-radius: 12px; /* Rounded corners */
+  border-radius: 12px; 
   font-weight: bold;
   text-align: center;
-  min-width: 2rem; /* Ensures badge width consistency */
+  min-width: 2rem; 
 }
 
 /* Search Box */
@@ -65,10 +66,10 @@
   border-radius: 5px;
   padding: 5px 15px;
   background-color: #f8f8f8;
-  width: 300px; /* Adjust width as needed */
+  width: 300px; 
   max-width: 100%;
   position: relative;
-  margin-right: 20px; /* Controls space between search bar and icons */
+  margin-right: 20px; 
 }
 
 .search-box input[type="text"] {
@@ -174,8 +175,8 @@
 }
 
 .navbar .nav-item:hover .nav-link::after {
-  width: 100%; /* Full underline width on hover */
-  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out 0.1s; /* Adds slight delay for blink effect */
+  width: 100%;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out 0.1s;
 }
 
 /* Custom underline colors for each category */
@@ -265,25 +266,20 @@
 .navbar .nav-item:nth-child(4):hover .nav-link::after { background-color: #f2c210; }
 .navbar .nav-item:nth-child(5):hover .nav-link::after { background-color: #11775d; }
 
-
-
-/* Basic Navbar Styles for Desktop */
-
-
-/* Navbar for small screens */
-.hamburger {
+/* .hamburger {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
-}
+} */
 
 /* Hide navbar items on mobile */
 .navbar-nav {
   display: flex;
   gap: 1rem;
 }
+}
 
-@media (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 480px){
   .navbar-nav {
     display: none; /* Hide navbar items by default */
     flex-direction: column;
@@ -292,9 +288,14 @@
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position:unset;
+  }
+  .navbar-nav .nav-item {
+    padding-left: 2rem;
+    
+
   }
 
   /* Show hamburger icon */
@@ -328,30 +329,222 @@
   .navbar-nav {
     flex-direction: column;
     align-items: flex-start;
+    
   }
   .search-box {
     padding: 6px 10px; /* Slightly smaller padding */
     border-radius: 18px;
+    display: none;
+    visibility: hidden;
+   
+  }
+  .nav-icons{
+    margin-top: 0px;
+    font-weight: 600;
+
   }
 
   .search-icon {
     font-size: 14px; /* Slightly smaller icon */
+    display: none;
   }
 
   .search-box input {
     font-size: 13px; /* Smaller font for input */
+    display: none;
   }
+  /* Right-aligned Icons */
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.nav-link i {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.custom-bag-icon {
+  transition: color 0.3s;
+}
+
+.custom-bag-icon:hover {
+  color: #ff3f6c;
+}
+
+
+.navbar .nav-item {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* submenu */
+.submenu-wrapper {
+  position: absolute;
+  top: 100%;
+  /* left: 2rem; */
+  width: 93vw;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  line-height: 1.3; 
+}
+
+
+.submenu {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  
+}
+.submenu ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.submenu ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu ul li a {
+  color: #333;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.submenu ul li a:hover {
+  color: #ff3f6c;
+}
+/* Underline Hover Effect */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar .nav-item:hover .nav-link::after {
+  width: 100%; 
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out 0.1s; 
+}
+
+/* Custom underline colors for each category */
+.navbar .nav-item:nth-child(1):hover .nav-link::after {
+  background-color: #eb4259; /* Pink for "Men" */
+}
+
+.navbar .nav-item:nth-child(2):hover .nav-link::after {
+  background-color:  #ee448b; /* Orange for "Women" */
+}
+
+.navbar .nav-item:nth-child(3):hover .nav-link::after {
+  background-color: #f26a10; /* Green for "Kids" */
+}
+
+.navbar .nav-item:nth-child(4):hover .nav-link::after {
+  background-color: #f2c210; /* Blue for "Home & Living" */
+}
+
+.navbar .nav-item:nth-child(5):hover .nav-link::after {
+  background-color: #11775d; /* Pink for "Beauty" */
+}
+
+.submenu-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu-column h6 {
+  font-size: 12px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent; /* Default, no underline */
 
 }
 
-@media (max-width: 992px) {
+.submenu-column a {
+  color: #333;
+  text-decoration: none;
+  /* margin: 0.3rem 0; */
+  margin: 2px 0; /* Minimal space between links */
+  font-size: 10px;
+}
+.submenu-column a:hover {
+  color: #eb4259;
+}
+
+
+/* CSS for submenu title colors */
+
+.submenu-wrapper.men h6 {
+  color: #eb4259; /* Example color for MEN */
+}
+
+.submenu-wrapper.women h6 {
+  color: #ee448b /* Example color for WOMEN */
+}
+
+.submenu-wrapper.kids h6 {
+  color:#f26a10; /* Example color for KIDS */
+}
+
+.submenu-wrapper.home-living h6 {
+  color:#f2c210; /* Example color for HOME & LIVING */
+}
+
+.submenu-wrapper.beauty h6 {
+  color:#11775d; /* Example color for BEAUTY */
+}
+
+/* Ensure submenu appears directly below each category item */
+.nav-wrapper {
+  position: relative;
+  
+}
+
+
+.navbar .nav-item:hover .nav-link::after {
+  width: 100%;
+  
+}
+
+/* Custom underline colors */
+.navbar .nav-item:nth-child(1):hover .nav-link::after { background-color: #eb4259; }
+.navbar .nav-item:nth-child(2):hover .nav-link::after { background-color: #ee448b; }
+.navbar .nav-item:nth-child(3):hover .nav-link::after { background-color: #f26a10; }
+.navbar .nav-item:nth-child(4):hover .nav-link::after { background-color: #f2c210; }
+.navbar .nav-item:nth-child(5):hover .nav-link::after { background-color: #11775d; }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
   .navbar-nav {
     padding-top: 10px;
     position:unset;
      
   }
   .navbar-nav .nav-item {
-    margin-bottom: 8px; /* Space between items */
+    padding-left: 2rem;
+
   }
 
 .search-box {
@@ -364,6 +557,8 @@
   width: 100%; /* Full width in mobile view */
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   margin: 10px 0; /* Add margin for spacing */
+  display: none;
+  visibility: hidden;
 }
 
 /* Search icon */
@@ -371,6 +566,7 @@
   color: #888; /* Subtle grey for icon */
   font-size: 16px;
   margin-right: 10px; /* Space between icon and input field */
+  display: none;
 }
 
 /* Input field */
@@ -381,11 +577,193 @@
   background: transparent;
   font-size: 14px;
   color: #333;
+  display: none;
 }
 
 /* Placeholder styling */
 .search-box input::placeholder {
   color: #aaa;
   font-size: 14px;
+  display: none;
 }
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.nav-link i {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.custom-bag-icon {
+  transition: color 0.3s;
+}
+
+.custom-bag-icon:hover {
+  color: #ff3f6c;
+}
+
+
+.navbar .nav-item {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* submenu */
+.submenu-wrapper {
+  position: absolute;
+  top: 100%;
+  /* left: 2rem; */
+  width: 93vw;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  line-height: 1.3; 
+}
+
+
+.submenu {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  
+}
+.submenu ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.submenu ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu ul li a {
+  color: #333;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.submenu ul li a:hover {
+  color: #ff3f6c;
+}
+/* Underline Hover Effect */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar .nav-item:hover .nav-link::after {
+  width: 100%; /* Full underline width on hover */
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out 0.1s; /* Adds slight delay for blink effect */
+}
+
+/* Custom underline colors for each category */
+.navbar .nav-item:nth-child(1):hover .nav-link::after {
+  background-color: #eb4259; /* Pink for "Men" */
+}
+
+.navbar .nav-item:nth-child(2):hover .nav-link::after {
+  background-color:  #ee448b; /* Orange for "Women" */
+}
+
+.navbar .nav-item:nth-child(3):hover .nav-link::after {
+  background-color: #f26a10; /* Green for "Kids" */
+}
+
+.navbar .nav-item:nth-child(4):hover .nav-link::after {
+  background-color: #f2c210; /* Blue for "Home & Living" */
+}
+
+.navbar .nav-item:nth-child(5):hover .nav-link::after {
+  background-color: #11775d; /* Pink for "Beauty" */
+}
+
+.submenu-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu-column h6 {
+  font-size: 12px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent; /* Default, no underline */
+
+}
+
+.submenu-column a {
+  color: #333;
+  text-decoration: none;
+  /* margin: 0.3rem 0; */
+  margin: 2px 0; /* Minimal space between links */
+  font-size: 14px;
+}
+.submenu-column a:hover {
+  color: #eb4259;
+}
+
+
+/* CSS for submenu title colors */
+
+.submenu-wrapper.men h6 {
+  color: #eb4259; /* Example color for MEN */
+}
+
+.submenu-wrapper.women h6 {
+  color: #ee448b /* Example color for WOMEN */
+}
+
+.submenu-wrapper.kids h6 {
+  color:#f26a10; /* Example color for KIDS */
+}
+
+.submenu-wrapper.home-living h6 {
+  color:#f2c210; /* Example color for HOME & LIVING */
+}
+
+.submenu-wrapper.beauty h6 {
+  color:#11775d; /* Example color for BEAUTY */
+}
+
+
+
+/* Ensure submenu appears directly below each category item */
+.nav-wrapper {
+  position: relative;
+  
+}
+
+
+.navbar .nav-item:hover .nav-link::after {
+  width: 100%;
+  
+}
+
+/* Custom underline colors */
+.navbar .nav-item:nth-child(1):hover .nav-link::after { background-color: #eb4259; }
+.navbar .nav-item:nth-child(2):hover .nav-link::after { background-color: #ee448b; }
+.navbar .nav-item:nth-child(3):hover .nav-link::after { background-color: #f26a10; }
+.navbar .nav-item:nth-child(4):hover .nav-link::after { background-color: #f2c210; }
+.navbar .nav-item:nth-child(5):hover .nav-link::after { background-color: #11775d; }
 }

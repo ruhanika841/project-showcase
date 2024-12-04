@@ -154,7 +154,7 @@ function Navbar({ wishlist, bag }) {
             <input type="text" placeholder="Search for products, brands, and more" aria-label="Search" />
           </form>
 
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto nav-icons">
             <li className="nav-item">
               <Link className="nav-link d-flex flex-column" to="/profile">
                 <i className="fas fa-user"></i>
