@@ -256,11 +256,11 @@
 .navbar .nav-item:nth-child(4):hover .nav-link::after { background-color: #f2c210; }
 .navbar .nav-item:nth-child(5):hover .nav-link::after { background-color: #11775d; }
 
-/* .hamburger {
+.hamburger {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
-} */
+}
 
 /* Hide navbar items on mobile */
 .navbar-nav {
@@ -271,7 +271,7 @@
 
 @media (min-width: 375px) and (max-width: 480px){
   .navbar-nav {
-    display: none; /* Hide navbar items by default */
+    display: none;
     flex-direction: column;
     background-color: #ffffff;
     position: absolute;
@@ -284,8 +284,6 @@
   }
   .navbar-nav .nav-item {
     padding-left: 2rem;
-    
-
   }
 
   /* Show hamburger icon */
