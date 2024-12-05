@@ -1,4 +1,3 @@
-// src/services/websocket.js
 let socket;
 
 const initializeWebSocket = () => {

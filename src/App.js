@@ -28,7 +28,6 @@ const App = () => {
   
   return (
     <>
-     
      <CartProvider>
         <Router>
         <Navbar wishlist={wishlist} bag={bag} />
