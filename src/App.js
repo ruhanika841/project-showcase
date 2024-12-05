@@ -9,6 +9,8 @@ import ProductPage from './pages/ProductPage'; // Import ProductPage
 import HomePage from './pages/HomePage';  
 // import Products from './pages/Products';  // Import Products page
 import { CartProvider } from './context/CartContext'; 
+import { initializeWebSocket, closeWebSocket } from './services/websocket';
+import { useEffect } from 'react';
 import './App.css';
 
 
@@ -18,9 +20,15 @@ const App = () => {
   const [wishlist, setWishlist] = useState([]);
   const [bag, setBag] = useState([]);
 
+  useEffect(() => {
+    initializeWebSocket();
+
+    return () => closeWebSocket(); // Ensure WebSocket is closed on unmount
+}, []);
   
   return (
     <>
+     
      <CartProvider>
         <Router>
         <Navbar wishlist={wishlist} bag={bag} />
