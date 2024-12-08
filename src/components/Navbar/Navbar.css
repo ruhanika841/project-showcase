@@ -546,7 +546,7 @@
     width: 300px; 
     max-width: 100%;
     position: relative;
-    margin-right: 20px; 
+    margin-right: 0px; 
   }
   
   .search-box input[type="text"] {

@@ -149,7 +149,7 @@ function Navbar({ wishlist, bag }) {
             )}
           </div>
 
-          <form className="d-flex search-box ms-auto me-3">
+          <form className="d-flex search-box ms-auto">
             <i className="fas fa-search search-icon"></i>
             <input type="text" placeholder="Search for products, brands, and more" aria-label="Search" />
           </form>
